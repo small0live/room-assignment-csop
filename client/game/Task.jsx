@@ -114,18 +114,18 @@ export default class Task extends React.Component {
             ) : (
               ""
             )}
-            <h5 className="bp3-heading">Constraints</h5>
+            {/*<h5 className="bp3-heading">Constraints</h5>*/}
             <ul>
               {task.constraints.map((constraint) => {
                 const failed = violatedConstraints.includes(constraint._id);
                 return (
                   <li key={constraint._id} className={failed ? "failed" : ""}>
-                    {failed ? (
+                    {/*{failed ? (
                       <span className="bp3-icon-standard bp3-icon-cross" />
                     ) : (
                       <span className="bp3-icon-standard bp3-icon-dot" />
                     )}
-                    {constraint.pair.join(" and ")} {constraint.text}.
+                    {/*{constraint.pair.join(" and ")} {constraint.text}.*/}
                   </li>
                 );
               })}

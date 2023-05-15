@@ -2,7 +2,8 @@ treatments:
   - name: solo
     factorIds:
       - yLgJTwkJB3dh4jh3r
-      - A6nriq6uaerSLGxv2
+      #- A6nriq6uaerSLGxv2
+      - TrGNc93vtJQpYZ8bs
       #- JyBPo3u4CPgAJck4b
       - CZCRnvc4LJh5cyHuW
       - iZyssrDWEYhnc8Q7B
@@ -12,7 +13,8 @@ treatments:
   - name: team
     factorIds:
       - DjKCDtyNpyHu7XvP9
-      - A6nriq6uaerSLGxv2
+      #- A6nriq6uaerSLGxv2
+      - YgXs6readiv6uYYBi
       - JyBPo3u4CPgAJck4b
       - iZyssrDWEYhnc8Q7B
       - RhXZkZdj5fYbQNssb
@@ -118,8 +120,28 @@ factors:
     name: 50cents
     value: 0.5
     factorTypeId: 9HMtrxYDhvFhhcrzM
+  - _id: TrGNc93vtJQpYZ8bs
+    name: 3min
+    value: 180
+    factorTypeId: ZzHiS2M4TFGPQRPsL
+  - _id: YgXs6readiv6uYYBi
+    name: 15min
+    value: 900
+    factorTypeId: ZzHiS2M4TFGPQRPsL
 lobbyConfigs:
-  - timeoutType: lobby
+  - name: endStudy
+    timeoutType: lobby
     timeoutInSeconds: 300
     timeoutStrategy: fail
+    gameLobbyIds: []
+  - name: startTask
+    timeoutType: lobby
+    timeoutInSeconds: 300
+    timeoutStrategy: ignore
+    gameLobbyIds: []
+  - name: startTaskInd
+    timeoutType: individual
+    timeoutInSeconds: 300
+    timeoutStrategy: fail
+    extendCount: 300
     gameLobbyIds: []

@@ -33,7 +33,8 @@ Empirica.gameInit((game, treatment) => {
     //TODO: I need to make sure that I keep the first task fixed (if it has training)
     //taskSequence = _.shuffle(taskSequence); //this is full shuffle
     taskSequence = customShuffle(taskSequence); //this is with keeping the first practice round fixed
-  }
+    console.log(taskSequence) // Olivia added this
+  } 
 
   //we'll have 1 round, each task is one stage
   const round = game.addRound();
