@@ -75,7 +75,7 @@ Empirica.onStageStart((game, round, stage) => {
       verb: "roundStarted",
       roundId:
         stage.name === "practice"
-          ? stage.name + " (will not count towards your score)"
+          ? "one"
           : stage.name,
       at: new Date(),
     },

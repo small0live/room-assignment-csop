@@ -14,17 +14,18 @@ export default class Thanks extends React.Component {
             <div className="pt-non-ideal-state-visual pt-non-ideal-state-icon">
               <span className="pt-icon pt-icon-thumbs-up" />
             </div>
-            <h4 className="pt-non-ideal-state-title">Finished!</h4>
+            <h4 className="pt-non-ideal-state-title">You have finished the room assignment game!</h4>
             <hr />
             <h4 className="pt-non-ideal-state-title">
-              Submission code: {player._id}
+              Next you will answer some questions about your experience in the team and about yourself. 
             </h4>
-            <h4 className="pt-non-ideal-state-title">
-              Bonus: ${player.get("bonus")}
-            </h4>
+            
             <hr />
             <div className="pt-non-ideal-state-description">
-              Thank you for participating!
+              <a href="https://eccles.qualtrics.com/jfe/form/SV_d0VePiylkHMjaiG" target="_blank" rel="noopener noreferrer">Please click this link to begin the questionnaire.</a>
+              <p></p>
+              As a reminder, your identifier is <em>{player.id}</em> and your color is <em>{player.get("name")}</em>.
+
             </div>
           </div>
         </div>

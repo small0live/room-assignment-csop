@@ -108,28 +108,33 @@ export default class Task extends React.Component {
             {stage.name === "practice" ? (
               <p>
                 <strong style={{ color: "blue" }}>
-                  This is practice round and the Score will not count
+                  
                 </strong>
               </p>
             ) : (
               ""
             )}
-            {/*<h5 className="bp3-heading">Constraints</h5>*/}
+
+            <h5 className="bp3-heading">Constraints</h5>
+            {player.get("name") === "Blue" ? (
             <ul>
               {task.constraints.map((constraint) => {
                 const failed = violatedConstraints.includes(constraint._id);
                 return (
                   <li key={constraint._id} className={failed ? "failed" : ""}>
-                    {/*{failed ? (
+                    {failed ? (
                       <span className="bp3-icon-standard bp3-icon-cross" />
                     ) : (
                       <span className="bp3-icon-standard bp3-icon-dot" />
-                    )}
-                    {/*{constraint.pair.join(" and ")} {constraint.text}.*/}
+                    )} 
+                    {constraint.pair.join(" and ")} {constraint.text}.
                   </li>
                 );
               })}
             </ul>
+          ) : (
+              ""
+            )}
           </div>
 
           <div className="payoff">

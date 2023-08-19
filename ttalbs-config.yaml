@@ -81,8 +81,8 @@ factors:
     value: 4
     factorTypeId: a39HzKWMN2BqMKeLJ
   - _id: CZCRnvc4LJh5cyHuW
-    name: 'true'
-    value: true
+    name: 'false'
+    value: false
     factorTypeId: YuxymxgdicnLpwqQq
   - _id: JyBPo3u4CPgAJck4b
     name: 'false'
