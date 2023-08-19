@@ -116,7 +116,8 @@ export default class Task extends React.Component {
             )}
 
             <h5 className="bp3-heading">Constraints</h5>
-            {player.get("name") === "Blue" ? (
+            {player.id.includes("A") ? (
+            // {player.get("name") === "Blue" ? (
             <ul>
               {task.constraints.map((constraint) => {
                 const failed = violatedConstraints.includes(constraint._id);
