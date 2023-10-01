@@ -107,35 +107,461 @@ export default class Task extends React.Component {
           <div className="constraints">
             {stage.name === "practice" ? (
               <p>
-                <strong style={{ color: "blue" }}>
-                  
-                </strong>
               </p>
             ) : (
               ""
             )}
 
             <h5 className="bp3-heading">Constraints</h5>
-            {player.id.includes("A") ? (
-            // {player.get("name") === "Blue" ? (
-            <ul>
-              {task.constraints.map((constraint) => {
-                const failed = violatedConstraints.includes(constraint._id);
-                return (
-                  <li key={constraint._id} className={failed ? "failed" : ""}>
-                    {failed ? (
-                      <span className="bp3-icon-standard bp3-icon-cross" />
-                    ) : (
-                      <span className="bp3-icon-standard bp3-icon-dot" />
-                    )} 
-                    {constraint.pair.join(" and ")} {constraint.text}.
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-              ""
-            )}
+            {player.id.includes("18_4_A") ? ( //16
+                  <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                  </ul>
+                  ) : (player.id.includes("18_4_B") ? (
+                    <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                    </ul>
+                    ) : (player.id.includes("18_4_C") ? (
+                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                      </ul>
+                      ) : (player.id.includes("18_4_D") ? (
+                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                      </ul>
+                      ) : (player.id.includes("12_4_A") ? (//4
+                                       <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                                       </ul>
+                                       ) : (player.id.includes("12_4_B") ? (
+                                        <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                        </ul>
+                                        ) : (player.id.includes("12_4_C") ? (
+                                          <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                          </ul>
+                                          ) : (player.id.includes("12_4_D") ? (
+                                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                            </ul>
+                                            ) : (player.id.includes("11_4_A") ? (//30
+                                              <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                </ul>
+                                ) : (player.id.includes("11_4_B") ? (
+                                  <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                  </ul>
+                                  ) : (player.id.includes("11_4_C") ? (
+                                    <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                    </ul>
+                                    ) : (player.id.includes("11_4_D") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                                      </ul>
+                                      ) : (player.id.includes("13_4_A") ? (//19
+                                         <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                         </ul>
+                                        ) : (player.id.includes("13_4_B") ? (
+                                           <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                           </ul>
+                                          ) : (player.id.includes("13_4_C") ? (
+                                             <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                            </ul>
+                                            ) : (player.id.includes("13_4_D") ? (
+                                               <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                              </ul>
+                                              ) : (player.id.includes("15_4_A") ? (//6
+                                        <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                                        </ul>
+                                        ) : (player.id.includes("15_4_B") ? (
+                                          <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                          </ul>
+                                          ) : (player.id.includes("15_4_C") ? (
+                                    <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                    </ul>
+                                    ) : (player.id.includes("15_4_D") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                      </ul>
+                                      ) : (player.id.includes("16_4_A") ? ( //34
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("16_4_B") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("16_4_C") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("16_4_D") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                      </ul>
+                                      ) : (player.id.includes("17_4_A") ? ( //18
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("17_4_B") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("17_4_C") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                                      </ul>
+                                      ) :
+                                      (player.id.includes("17_4_D") ? (
+                                      <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                      </ul>
+                                      ) : (player.id.includes("14_4_A") ? ( //35
+                                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                                            </ul>
+                                            ) : (player.id.includes("14_4_B") ? (
+                                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                            </ul>
+                                            ) : (player.id.includes("14_4_C") ? (
+                                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                            </ul>
+                                            ) : (player.id.includes("14_4_D") ? (
+                                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                                            </ul>
+                                            ) : (player.id.includes("19_4_A") ? (//23
+                        <ul>
+<li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                        </ul>
+                        ) : (player.id.includes("19_4_B") ? (
+                          <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+                          </ul>
+                          ) : (player.id.includes("19_4_C") ? (
+                            <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                           </ul>
+                            ) : (player.id.includes("19_4_D") ? (
+                              <ul>
+<li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+<li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+<li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                              </ul>
+                              ) : (player.id.includes("20_4_A") ? (
+                  <ul>
+                  <li className="bp3-icon-standard bp3-icon-dot">A and B must be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">B and H must live in the same room.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">C and E must be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">I and N can't live in the same room or be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">L and Q can't live in the same room or be neighbors.</li>
+                  <li className="bp3-icon-standard bp3-icon-dot">N and R must live in the same room.</li>
+                  </ul>
+                  ) : (player.id.includes("20_4_B") ? (
+                    <ul>
+                    <li className="bp3-icon-standard bp3-icon-dot">A and J can't live in the same room or be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">F and I can't live in the same room.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                    <li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                    </ul>
+                    ) : (player.id.includes("20_4_C") ? (
+                      <ul>
+                      <li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">C and J can't live in the same room.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">G and J must be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                      </ul>
+                      ) : (player.id.includes("20_4_D") ? (
+                      <ul>
+                      <li className="bp3-icon-standard bp3-icon-dot">B and F must be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">B and P can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">D and F can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">E and Q can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">J and K can't live in the same room or be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">K and R must be neighbors.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">M and O must live in the same room.</li>
+                      <li className="bp3-icon-standard bp3-icon-dot">O and P must be neighbors.</li>
+                      </ul>
+                      ) :
+                                          ("") 
+                                          )))))))))))))))))))))))))))))))))))))))}
           </div>
 
           <div className="payoff">
